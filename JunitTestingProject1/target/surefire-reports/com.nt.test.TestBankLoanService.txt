@@ -1,0 +1,42 @@
+-------------------------------------------------------------------------------
+Test set: com.nt.test.TestBankLoanService
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 4, Errors: 0, Skipped: 0, Time elapsed: 30.066 s <<< FAILURE! - in com.nt.test.TestBankLoanService
+com.nt.test.TestBankLoanService.testcalSimpleInterestAmountWithNUmber()  Time elapsed: 0.022 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: results are not matched ==> expected: <24000.119140625> but was: <0.0>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:86)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1024)
+	at com.nt.test.TestBankLoanService.testcalSimpleInterestAmountWithNUmber(TestBankLoanService.java:56)
+
+com.nt.test.TestBankLoanService.testcalSimpleInterestAmountWithBigNUmber()  Time elapsed: 0 s  <<< FAILURE!
+java.lang.NullPointerException: Cannot invoke "com.nt.service.BankLoanService.calSimpleInterestAmount(float, float, float)" because "com.nt.test.TestBankLoanService.service" is null
+	at com.nt.test.TestBankLoanService.testcalSimpleInterestAmountWithBigNUmber(TestBankLoanService.java:65)
+
+com.nt.test.TestBankLoanService.testcalSimpleInterestAmountWithNoException()  Time elapsed: 0.009 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: Unexpected exception thrown: java.lang.NullPointerException: Cannot invoke "com.nt.service.BankLoanService.calSimpleInterestAmount(float, float, float)" because "com.nt.test.TestBankLoanService.service" is null
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+	at org.junit.jupiter.api.AssertDoesNotThrow.createAssertionFailedError(AssertDoesNotThrow.java:84)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:53)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:36)
+	at org.junit.jupiter.api.Assertions.assertDoesNotThrow(Assertions.java:3168)
+	at com.nt.test.TestBankLoanService.testcalSimpleInterestAmountWithNoException(TestBankLoanService.java:102)
+Caused by: java.lang.NullPointerException: Cannot invoke "com.nt.service.BankLoanService.calSimpleInterestAmount(float, float, float)" because "com.nt.test.TestBankLoanService.service" is null
+	at com.nt.test.TestBankLoanService.lambda$2(TestBankLoanService.java:103)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:49)
+	... 14 more
+
+com.nt.test.TestBankLoanService.testcalSimpleInterestAmountWithInvalidNUmber()  Time elapsed: 0.009 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: Unexpected exception type thrown, expected: <java.lang.IllegalArgumentException> but was: <java.lang.NullPointerException>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:67)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)
+	at org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3115)
+	at com.nt.test.TestBankLoanService.testcalSimpleInterestAmountWithInvalidNUmber(TestBankLoanService.java:75)
+Caused by: java.lang.NullPointerException: Cannot invoke "com.nt.service.BankLoanService.calSimpleInterestAmount(float, float, float)" because "com.nt.test.TestBankLoanService.service" is null
+	at com.nt.test.TestBankLoanService.lambda$0(TestBankLoanService.java:76)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:53)
+	... 14 more
+
