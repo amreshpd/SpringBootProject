@@ -1,0 +1,73 @@
+spring:
+  profiles:
+    active: hh
+---
+spring:
+ profiles:
+  include: dev  
+---
+
+spring:
+  config:
+    activate:
+      on-profile: dev 
+    
+  datasource:
+    dbcp2:
+      initial-size: 10
+      max-conn-lifetime-millis: 1000000
+      max-total: 100
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    password: Amresh1998
+    type: org.apache.commons.dbcp2.BasicDataSource
+    url: jdbc:mysql://localhost:3306/mini01
+    username: root
+    
+---
+
+spring:
+  config:
+    activate:
+      on-profile: prod
+  datasource:
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+    hikari:
+      keepalive-time: 100000
+      maximum-pool-size: 100
+      minimum-idle: 10
+    password: amresh1998
+    type: com.zaxxer.hikari.HikariDataSource
+    url: jdbc:oracle:thin:@localhost:1521:xe
+    username: amresh 
+    
+    
+---
+spring:
+  config:
+    activate:
+      on-profile: test
+     
+  datasource:
+    driver-class-name: oracle.jdbc.OracleDriver
+    password: amresh1998
+    type: com.mchange.v2.c3p0.ComboPooledDataSource
+    url: jdbc:oracle:thin:@localhost:1521:xe
+    username: amresh    
+    
+---
+spring:
+  config:
+    activate:
+      on-profile: uat
+      
+  datasource:
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+    oracleucp:
+      max-pool-size: 100
+      min-pool-size: 10
+      time-to-live-connection-timeout: 10000000
+    password: amresh1998
+    type: oracle.ucp.jdbc.PoolDataSourceImpl
+    url: jdbc:oracle:thin:@localhost:1521:xe
+    username: amresh       
+      
