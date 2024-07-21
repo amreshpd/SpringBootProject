@@ -1,0 +1,8 @@
+2024-05-24T16:53:17.968+05:30  INFO 5692 --- [demo] [main] com.nt.DemoApplication                   : Starting DemoApplication using Java 21.0.2 with PID 5692 (D:\spring boot practice\LoggerProj01\target\classes started by DELL in D:\spring boot practice\LoggerProj01)
+2024-05-24T16:53:17.970+05:30  INFO 5692 --- [demo] [main] com.nt.DemoApplication                   : No active profile set, falling back to 1 default profile: "default"
+2024-05-24T16:53:19.197+05:30  INFO 5692 --- [demo] [main] com.nt.DemoApplication                   : Started DemoApplication in 2.185 seconds (process running for 3.191)
+2024-05-24T16:53:19.205+05:30  INFO 5692 --- [demo] [main] com.nt.DemoApplication                   : ioc container is created
+2024-05-24T16:53:19.206+05:30 DEBUG 5692 --- [demo] [main] com.nt.sbeans.Test1                      : start of season finder method
+2024-05-24T16:53:19.210+05:30 DEBUG 5692 --- [demo] [main] com.nt.sbeans.Test1                      : end of season finder method
+2024-05-24T16:53:19.222+05:30  INFO 5692 --- [demo] [main] com.nt.DemoApplication                   : ioc container ended
+2024-05-24T16:53:19.225+05:30  INFO 5692 --- [demo] [main] com.nt.DemoApplication                   : end of main method
