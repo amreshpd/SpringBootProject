@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: DataJpaProj01
+  datasource:
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+    hikari:
+      keepalive-time: 1000
+      minimum-idle: 10
+    password: amresh1998
+    url: jdbc:oracle:thin:@localhost:1521:xe
+    username: amresh
+  jpa:
+    database-platform: org.hibernate.dialect.OracleDialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
