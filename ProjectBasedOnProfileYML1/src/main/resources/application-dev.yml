@@ -1,0 +1,11 @@
+spring:
+  datasource:
+    dbcp2:
+      initial-size: 10
+      max-conn-lifetime-millis: 100000
+      max-total: 100
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    password: Amresh1998
+    type: org.apache.commons.dbcp2.BasicDataSource
+    url: jdbc:mysql://localhost:3306/mini01
+    username: root
